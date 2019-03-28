@@ -14,9 +14,17 @@ function AddEntry() {
         )
         $('.shopping-item-toggle').on( "click", function() {
           
-          $(this).parent("div").prev().addClass('shopping-item__checked');
+          $(this).parent("div").prev().toggleClass('shopping-item__checked');
           
            });
+      
+      $('.shopping-item-delete').on( "click", function() {
+        console.log( "click" );  
+        $(this).parent().parent().remove();
+            
+             }); 
+
+
       })
   
   }
@@ -30,7 +38,7 @@ function CheckEntry()  {
     
     $('.shopping-item-toggle').on( "click", function() {
       
-      $(this).parent("div").prev().addClass('shopping-item__checked');
+      $(this).parent("div").prev().toggleClass('shopping-item__checked');
       
        }); 
       }
